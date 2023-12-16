@@ -53,24 +53,24 @@ var shannonFanoOutputFilePath = $"{outputFileDirectory}\\Shannon-Fano.txt";
 IOOperations.SaveValueToFile(shannonFanoOutputFilePath, shannonFanoResult);
 
 
-//var aritmeticCodeProbabilities = Aritmetic.GetAritmeticCodeProbabilities(probabilityOfChars);
+var aritmeticCodeProbabilities = Aritmetic.GetAritmeticCodeProbabilities(probabilityOfChars);
 
-//watch.Reset();
-//watch.Start();
-//var aritmeticEncoded = Aritmetic.Encode(aritmeticCodeProbabilities, inputFileText);
-//watch.Stop();
+watch.Reset();
+watch.Start();
+var aritmeticEncoded = Aritmetic.Encode(aritmeticCodeProbabilities, inputFileText);
+watch.Stop();
 
-//var aritmeticEncodeTimeOutputFilePath = $"{outputFileDirectory}\\aritmetic_encoded_time.txt";
-//IOOperations.SaveValueToFile(aritmeticEncodeTimeOutputFilePath, $"{watch.ElapsedMilliseconds} ms");
+var aritmeticEncodeTimeOutputFilePath = $"{outputFileDirectory}\\aritmetic_encoded_time.txt";
+IOOperations.SaveValueToFile(aritmeticEncodeTimeOutputFilePath, $"{watch.ElapsedMilliseconds} ms");
 
-//var aritmeticEncodedOutputFilePath = $"{outputFileDirectory}\\aritmetic_encoded.txt";
-//IOOperations.SaveValueToFile(aritmeticEncodedOutputFilePath, aritmeticEncoded);
+var aritmeticEncodedOutputFilePath = $"{outputFileDirectory}\\aritmetic_encoded.txt";
+IOOperations.SaveValueToFile(aritmeticEncodedOutputFilePath, aritmeticEncoded);
 
 
-//var aritmeticDecoded = Aritmetic.Decode(aritmeticCodeProbabilities, aritmeticEncoded, inputFileText.Length);
+var aritmeticDecoded = Aritmetic.Decode(aritmeticCodeProbabilities, aritmeticEncoded, inputFileText.Length);
 
-//var aritmeticDecodedOutputFilePath = $"{outputFileDirectory}\\aritmetic_decoded.txt";
-//IOOperations.SaveValueToFile(aritmeticDecodedOutputFilePath, aritmeticDecoded);
+var aritmeticDecodedOutputFilePath = $"{outputFileDirectory}\\aritmetic_decoded.txt";
+IOOperations.SaveValueToFile(aritmeticDecodedOutputFilePath, aritmeticDecoded);
 
 
 var L = shannonFanoResult.Sum(n => n.Code.Length * n.Probability); // Średnia długość słowa kodowego
